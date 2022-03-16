@@ -77,4 +77,4 @@ async def randome(message: types.Message):
 if __name__ == '__main__':
     server.debug = True
     server.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
-    # executor.start_polling(dp, skip_updates = True)
+    executor.start_polling(dp, skip_updates = True)
