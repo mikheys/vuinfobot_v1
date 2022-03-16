@@ -1,8 +1,10 @@
 import logging
+import os
 from aiogram.utils.callback_data import CallbackData
 from aiogram import Bot, Dispatcher, executor, types
 # from aiogram.types.message import ContentTypes
 # from aiogram.types.message import ContentType
+from flask import Flask, request
 
 import config as cfg
 import text as txt
@@ -12,6 +14,7 @@ logging.basicConfig(level=logging.INFO)
 
 bot = Bot(token=cfg.TOKEN)
 dp = Dispatcher(bot)
+server = Flask(__name__)
 
 # --- Основное меню ---
 @dp.message_handler(commands=["start"], commands_prefix="/")
@@ -72,4 +75,6 @@ async def randome(message: types.Message):
     await message.answer()
 
 if __name__ == '__main__':
-    executor.start_polling(dp, skip_updates = True)
+    server.debug = True
+    server.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
+    # executor.start_polling(dp, skip_updates = True)
