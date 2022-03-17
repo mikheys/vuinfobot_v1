@@ -30,43 +30,43 @@ async def bot_message(message: types.Message):
 
 # --- Обработка пунктов меню ---
 @dp.callback_query_handler(text="emergency")
-async def randome(message: types.Message):
-    await bot.send_message(message.from_user.id, "Экстренное:\nhttps://telegra.ph/emergency-03-16")
+async def emergency_msg(message: types.Message):
+    await bot.send_message(message.from_user.id, "https://telegra.ph/emergency-03-16")
     await message.answer()
 
 @dp.callback_query_handler(text="medical")
-async def randome(message: types.Message):
-    await bot.send_message(message.from_user.id, "Медицинская помощь:\nhttps://telegra.ph/medical-03-16-3")
+async def medical_msg(message: types.Message):
+    await bot.send_message(message.from_user.id, "https://telegra.ph/medical-03-16-3")
     await message.answer()
 
 @dp.callback_query_handler(text="veterinary")
-async def randome(message: types.Message):
-    await bot.send_message(message.from_user.id, "Ветеринарная помощь:\nhttps://telegra.ph/veterinary-03-16")
+async def veterinary_msg(message: types.Message):
+    await bot.send_message(message.from_user.id, "https://telegra.ph/veterinary-03-16")
     await message.answer()
 
 @dp.callback_query_handler(text="infovu")
-async def randome(message: types.Message):
-    await bot.send_message(message.from_user.id, "Контакты, инфо ВУ:\nhttps://telegra.ph/infovu-03-16")
+async def infovu_msg(message: types.Message):
+    await bot.send_message(message.from_user.id, "https://telegra.ph/infovu-03-16")
     await message.answer()
 
 @dp.callback_query_handler(text="transport")
-async def randome(message: types.Message):
-    await bot.send_message(message.from_user.id, "Общественный транспорт:\nhttps://telegra.ph/transport-03-16")
+async def transport_msg(message: types.Message):
+    await bot.send_message(message.from_user.id, "https://telegra.ph/transport-03-16")
     await message.answer()
 
 @dp.callback_query_handler(text="taxi")
-async def randome(message: types.Message):
-    await bot.send_message(message.from_user.id, "Такси:\nhttps://telegra.ph/taxi-03-16-2")
+async def taxi_msg(message: types.Message):
+    await bot.send_message(message.from_user.id, "https://telegra.ph/taxi-03-16-2")
     await message.answer()
 
 @dp.callback_query_handler(text="publicservice")
-async def randome(message: types.Message):
-    await bot.send_message(message.from_user.id, "Коммунальные услуги:\nhttps://telegra.ph/publicservice-03-16")
+async def publicservice_msg(message: types.Message):
+    await bot.send_message(message.from_user.id, "https://telegra.ph/publicservice-03-16")
     await message.answer()
 
 @dp.callback_query_handler(text="others")
-async def randome(message: types.Message):
-    await bot.send_message(message.from_user.id, "Прочие услуги:\nhttps://telegra.ph/others-03-16")
+async def others_msg(message: types.Message):
+    await bot.send_message(message.from_user.id, "https://telegra.ph/others-03-16")
     await message.answer()
 
 if __name__ == '__main__':
