@@ -59,6 +59,11 @@ async def taxi_msg(message: types.Message):
     await bot.send_message(message.from_user.id, "https://telegra.ph/taxi-03-16-2")
     await message.answer()
 
+@dp.callback_query_handler(text="eda")
+async def eda_msg(message: types.Message):
+    await bot.send_message(message.from_user.id, "https://telegra.ph/eda-03-17")
+    await message.answer()
+
 @dp.callback_query_handler(text="publicservice")
 async def publicservice_msg(message: types.Message):
     await bot.send_message(message.from_user.id, "https://telegra.ph/publicservice-03-16")
