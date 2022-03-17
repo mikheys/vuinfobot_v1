@@ -1,5 +1,4 @@
 import logging
-import os
 from aiogram.utils.callback_data import CallbackData
 from aiogram import Bot, Dispatcher, executor, types
 # from aiogram.types.message import ContentTypes
