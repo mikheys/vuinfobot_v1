@@ -22,9 +22,9 @@ async def bot_message(message: types.Message):
     if message.text == "Меню":
         # await message.delete()
         await message.answer("Выберите нужный раздел ", reply_markup=nav.mainMenu)
-    else:
+ #   else:
         # await message.reply('Неизвестная команда')
-        await message.delete()
+#        await message.delete()
 
 
 
