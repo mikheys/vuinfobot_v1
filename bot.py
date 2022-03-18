@@ -3,6 +3,7 @@ from aiogram.utils.callback_data import CallbackData
 from aiogram import Bot, Dispatcher, executor, types
 
 import config as cfg
+import text
 import text as txt
 import markups as nav
 
@@ -23,6 +24,10 @@ async def bot_message(message: types.Message):
         # await message.delete()
         await message.answer("Выберите нужный раздел ", reply_markup=nav.mainMenu)
  #   else:
+    if message.text.lower() in text.EDA:
+        # await bot.send_message(message.from_user.id, "https://telegra.ph/eda-03-17")
+        await message.answer("https://telegra.ph/eda-03-17")
+        # await message.answer()
         # await message.reply('Неизвестная команда')
 #        await message.delete()
 
