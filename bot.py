@@ -1,5 +1,4 @@
 import logging
-from aiogram.utils.callback_data import CallbackData
 from aiogram import Bot, Dispatcher, executor, types
 
 import config as cfg
